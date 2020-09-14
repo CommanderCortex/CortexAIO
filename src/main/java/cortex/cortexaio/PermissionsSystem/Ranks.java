@@ -1,6 +1,9 @@
 package cortex.cortexaio.PermissionsSystem;
 
 public class Ranks {
+
+    //All ranks will hold an int value for a permissible system
+
     public int DEVELOPER = 10;
     public int ADMIN = 9;
     public int SNR_MODERATOR = 8;

@@ -2,8 +2,11 @@ package cortex.cortexaio.PermissionsSystem;
 
 import cortex.cortexaio.Global.Strings.PathStrings;
 import cortex.cortexaio.Utils.ColorUtil;
+import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.Team;
 
 import java.io.File;
 import java.io.IOException;
@@ -31,10 +34,27 @@ public class RankManager extends Ranks{ //Using yml files to simplify the proces
             return Color("&4&lDEV &r");
         if(rank == ADMIN)
             return Color("&4&lADMIN &r");
+        if(rank == SNR_MODERATOR)
+            return Color("&6&lSR.MOD &r");
+        if(rank == MODERATOR)
+            return Color("&6&lMOD &r");
+        if(rank == TRAINIEE)
+            return Color("&6&lTRANIEE &r");
         return "";
     }
-
-
+    //Gets the rank prefix and sets it before the players name in tab
+    public void RankPrefixForTab(){
+        for(Player player : Bukkit.getOnlinePlayers()){
+            Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();
+            for(Player player1 : Bukkit.getOnlinePlayers()){
+                String prefix = getRankPrefix(getPlayerRank(player));
+                Team team = scoreboard.registerNewTeam(player1.getDisplayName()); //Using Display name to work with /nick
+                team.setPrefix(prefix);
+                team.addEntry(player1.getDisplayName());
+            }
+            player.setScoreboard(scoreboard);
+        }
+    }
     //Implementing Color Util to make getting Color(<string>) easy
     String Color(String string){
         return ColorUtil.Color(string);
