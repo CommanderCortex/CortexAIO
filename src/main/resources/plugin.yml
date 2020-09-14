@@ -1,0 +1,7 @@
+name: CortexAIO
+version: ${project.version}
+main: cortex.cortexaio.CortexAIO
+api-version: 1.16
+authors: [CommanderCortex]
+description: Cortex Commands, Permissions, Etc.. All In One
+website: www.github.com/CommanderCortex
