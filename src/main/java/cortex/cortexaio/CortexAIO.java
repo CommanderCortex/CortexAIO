@@ -1,6 +1,7 @@
 package cortex.cortexaio;
 
-import cortex.cortexaio.Commands.SetRankCommand;
+import cortex.cortexaio.Commands.GeneralCommands.ClearChatCommand;
+import cortex.cortexaio.Commands.RankCommands.SetRankCommand;
 import cortex.cortexaio.Global.Files.MainDIRSetup;
 import cortex.cortexaio.Global.PlayerEvents.OnChatEvent;
 import cortex.cortexaio.Global.PlayerEvents.OnJoinEvent;
@@ -23,5 +24,6 @@ public final class CortexAIO extends JavaPlugin {
     }
     public void registerCommands(){
         Objects.requireNonNull(Bukkit.getServer().getPluginCommand("rank")).setExecutor(new SetRankCommand());
+        Objects.requireNonNull(Bukkit.getPluginCommand("clearchat")).setExecutor(new ClearChatCommand());
     }
 }

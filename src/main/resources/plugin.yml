@@ -5,3 +5,8 @@ api-version: 1.16
 authors: [CommanderCortex]
 description: Cortex Commands, Permissions, Etc.. All In One
 website: www.github.com/CommanderCortex
+commands:
+  rank:
+    description: Changes Ranks
+  clearchat:
+    description: Clears chat

@@ -1,4 +1,4 @@
-package cortex.cortexaio.Commands;
+package cortex.cortexaio.Commands.RankCommands;
 
 import cortex.cortexaio.Global.Messages.ErrorMessages;
 import cortex.cortexaio.PermissionsSystem.RankManager;
