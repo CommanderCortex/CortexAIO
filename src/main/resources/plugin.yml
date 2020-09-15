@@ -12,3 +12,7 @@ commands:
     description: Clears chat
   gm:
     description: Gm switcher
+  fly:
+    description: Fly Switcher
+  kick:
+    description: Kick that hoe

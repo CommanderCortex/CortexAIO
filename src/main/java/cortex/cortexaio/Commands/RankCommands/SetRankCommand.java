@@ -51,17 +51,15 @@ public class SetRankCommand implements CommandExecutor {
                         rankManager.setPlayerRank(target, rankManager.NULL);
                 }
                 rankManager.RankPrefixForTab();
-                player.sendMessage(newPrefix);
-                return true;
+                player.sendMessage(Color("Rank Updated to: "+newPrefix));
             }else{
                 assert target != null;
                 player.sendMessage(ErrorMessages.PLAYERNOTFOUND + target.getName());
-                return true;
             }
         }else{
             player.sendMessage(ErrorMessages.PERMSMESSAGE);
-            return true;
         }
+        return true;
     }
     //Implementing Color Util to make getting Color(<string>) easy
     String Color(String string){
