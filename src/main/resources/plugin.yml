@@ -10,3 +10,5 @@ commands:
     description: Changes Ranks
   clearchat:
     description: Clears chat
+  gm:
+    description: Gm switcher
