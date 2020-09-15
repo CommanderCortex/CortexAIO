@@ -1,0 +1,3 @@
+# CortexAIO
+
+This plugin is an all in one Cortex plugin including Perms, Commands, Etc...
