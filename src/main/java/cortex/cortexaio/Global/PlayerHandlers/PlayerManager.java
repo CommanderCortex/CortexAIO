@@ -22,6 +22,7 @@ public class PlayerManager {
         YamlConfiguration playerConfig = YamlConfiguration.loadConfiguration(__PlayerFile);
         playerConfig.addDefault("Player", player.getName());
         playerConfig.addDefault("Rank", ranks.NULL);
+        playerConfig.addDefault("Punishment", false);
         playerConfig.options().copyDefaults(true);
         try { playerConfig.save(__PlayerFile); } catch (IOException e) { e.printStackTrace(); }
         player.sendMessage(ColorUtil.Color("&aYour player file has been created / updated"));

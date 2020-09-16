@@ -21,11 +21,11 @@ public final class CortexAIO extends JavaPlugin {
         registerEvents();
         registerCommands();
     }
-    public void registerEvents(){
+    private void registerEvents(){
         Bukkit.getPluginManager().registerEvents(new OnJoinEvent(), this);
         Bukkit.getPluginManager().registerEvents(new OnChatEvent(), this);
     }
-    public void registerCommands(){
+    private void registerCommands(){
         Objects.requireNonNull(Bukkit.getPluginCommand("rank")).setExecutor(new SetRankCommand());
         Objects.requireNonNull(Bukkit.getPluginCommand("clearchat")).setExecutor(new ClearChatCommand());
         Objects.requireNonNull(Bukkit.getPluginCommand("gm")).setExecutor(new GamemodeCommand());
