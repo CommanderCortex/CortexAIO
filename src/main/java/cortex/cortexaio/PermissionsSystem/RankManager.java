@@ -43,6 +43,7 @@ public class RankManager extends Ranks{ //Using yml files to simplify the proces
         return "";
     }
     //Gets the rank prefix and sets it before the players name in tab
+    @SuppressWarnings("ConstantConditions")
     public void RankPrefixForTab(){
         for(Player player : Bukkit.getOnlinePlayers()){
             Scoreboard scoreboard = Bukkit.getScoreboardManager().getNewScoreboard();

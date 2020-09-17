@@ -11,9 +11,10 @@ import java.io.IOException;
 
 public class PlayerManager {
 
-    static Ranks ranks = new Ranks();
+    static final Ranks ranks = new Ranks();
 
     //Setup the player file
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void setupPlayer(Player player){
         String PlayerFile = PathStrings.getPlayerFile(player);
         File __PlayerFile = new File(PlayerFile);

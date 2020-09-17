@@ -11,7 +11,7 @@ import org.bukkit.entity.Player;
 
 public class SetRankCommand implements CommandExecutor {
 
-    RankManager rankManager = new RankManager();
+    final RankManager rankManager = new RankManager();
 
     public String __GETRANKPREFIX(Player player){
         return rankManager.getRankPrefix(rankManager.getPlayerRank(player));

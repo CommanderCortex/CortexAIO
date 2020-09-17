@@ -12,7 +12,7 @@ import org.bukkit.entity.Player;
 
 public class ClearChatCommand implements CommandExecutor {
 
-    RankManager rankManager = new RankManager();
+    final RankManager rankManager = new RankManager();
 
     public void clearChat(){
         for(int i = 0; i<150; i++){

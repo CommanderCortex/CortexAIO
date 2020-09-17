@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class FlyCommand implements CommandExecutor {
-    RankManager rankManager = new RankManager();
+    final RankManager rankManager = new RankManager();
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player))

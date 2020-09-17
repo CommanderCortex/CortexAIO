@@ -8,7 +8,7 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
 
 public class OnJoinEvent implements Listener {
-    RankManager rankManager = new RankManager();
+    final RankManager rankManager = new RankManager();
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent playerJoinEvent){
         Player player = playerJoinEvent.getPlayer();

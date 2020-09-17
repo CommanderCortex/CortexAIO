@@ -1,5 +1,6 @@
 package cortex.cortexaio;
 
+import cortex.cortexaio.BanSystem.BanEvents.OnTempBannedPlayerJoin;
 import cortex.cortexaio.Commands.GeneralCommands.ClearChatCommand;
 import cortex.cortexaio.Commands.GeneralCommands.FlyCommand;
 import cortex.cortexaio.Commands.GeneralCommands.GamemodeCommand;
@@ -24,6 +25,7 @@ public final class CortexAIO extends JavaPlugin {
     private void registerEvents(){
         Bukkit.getPluginManager().registerEvents(new OnJoinEvent(), this);
         Bukkit.getPluginManager().registerEvents(new OnChatEvent(), this);
+        Bukkit.getPluginManager().registerEvents(new OnTempBannedPlayerJoin(), this);
     }
     private void registerCommands(){
         Objects.requireNonNull(Bukkit.getPluginCommand("rank")).setExecutor(new SetRankCommand());

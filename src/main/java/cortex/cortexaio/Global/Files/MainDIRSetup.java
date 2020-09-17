@@ -7,6 +7,7 @@ import java.io.File;
 
 public class MainDIRSetup {
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void MAINDIRSETUP(){
         File __MAINDIR = new File(PathStrings.MAINDIR);
         if(!__MAINDIR.exists()) {
@@ -14,6 +15,7 @@ public class MainDIRSetup {
         }
     }
 
+    @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void PLAYERDIRSETUP(){
         File __PLAYERDIR = new File(PathStrings.PLAYERDIR);
         if(!__PLAYERDIR.exists()){

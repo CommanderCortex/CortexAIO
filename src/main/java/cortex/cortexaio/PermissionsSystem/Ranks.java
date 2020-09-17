@@ -4,12 +4,12 @@ public class Ranks {
 
     //All ranks will hold an int value for a permissible system
 
-    public int DEVELOPER = 10;
-    public int ADMIN = 9;
-    public int SNR_MODERATOR = 8;
-    public int MODERATOR = 7;
-    public int TRAINIEE = 6;
+    public final int DEVELOPER = 10;
+    public final int ADMIN = 9;
+    public final int SNR_MODERATOR = 8;
+    public final int MODERATOR = 7;
+    public final int TRAINIEE = 6;
     public int TESTER = 2;
     public int MEMBER = 1;
-    public int NULL = 0;
+    public final int NULL = 0;
 }

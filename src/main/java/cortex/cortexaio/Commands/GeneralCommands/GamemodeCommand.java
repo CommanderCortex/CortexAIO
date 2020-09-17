@@ -4,7 +4,6 @@ import cortex.cortexaio.Global.Messages.ErrorMessages;
 import cortex.cortexaio.Global.Messages.PluginPrefix;
 import cortex.cortexaio.PermissionsSystem.RankManager;
 import cortex.cortexaio.Utils.ColorUtil;
-import org.bukkit.Color;
 import org.bukkit.GameMode;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -12,7 +11,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class GamemodeCommand implements CommandExecutor {
-    RankManager rankManager = new RankManager();
+    final RankManager rankManager = new RankManager();
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!(sender instanceof Player))
